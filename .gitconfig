@@ -1,0 +1,27 @@
+[user]
+	name = Jussi Mononen
+	email = agilepoodle@gmail.com 
+
+[alias]
+	st = status
+	ls = log --oneline --format=\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\" --graph 
+	dc = diff --cached
+	co = checkout
+	br = branch
+	p = pull
+	cm = commit -m
+	s = show
+	cam = commit -am
+	stu = status -uall
+	up = !git fetch origin && git rebase origin/master
+	d = diff
+
+[core]
+	editor = emacs
+	autocrlf = input
+[color]
+	ui = true
+[push]
+	default = upstream
+[branch]
+	autosetuprebase = always
