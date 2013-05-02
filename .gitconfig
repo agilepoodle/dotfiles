@@ -1,27 +1,33 @@
 [user]
-	name = Jussi Mononen
-	email = agilepoodle@gmail.com 
-
+  name = Jussi Mononen
+  email = jussi.mononen@nitorcreations.com
 [alias]
-	st = status
-	ls = log --oneline --format=\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\" --graph 
-	dc = diff --cached
-	co = checkout
-	br = branch
-	p = pull
-	cm = commit -m
-	s = show
-	cam = commit -am
-	stu = status -uall
-	up = !git fetch origin && git rebase origin/master
-	d = diff
+  st = status
+  lc = log ORIG_HEAD.. --stat --no-merges
+  l = log --decorate
+  ls = log --graph --decorate --date=short --pretty=format:\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\"
+  lf = log --graph --decorate --date=short --name-only --pretty=format:\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\"
+  #ls = log --oneline --format=\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\" --graph
+  dc = diff --cached
+  co = checkout
+  br = branch
+  p = pull
+  cm = commit -m
+  s = show
+  cam = commit -am
+  stu = status -uall
+  up = !git fetch origin && git rebase origin/master
+  d = diff
+  f = fetch
+  poh = push origin HEAD
+  rom = rebase origin/master
 
 [core]
-	editor = emacs
-	autocrlf = input
+  editor = emacs
+  autocrlf = input
 [color]
-	ui = true
+  ui = true
 [push]
-	default = upstream
+  default = upstream
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
