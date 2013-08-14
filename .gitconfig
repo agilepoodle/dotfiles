@@ -21,6 +21,8 @@
   f = fetch
   poh = push origin HEAD
   rom = rebase origin/master
+  spull = !git svn fetch && git svn rebase -l
+  spush = !git svn dcommit
 
 [core]
   editor = emacs
