@@ -8,6 +8,7 @@
   ls = log --graph --decorate --date=short --pretty=format:\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\"
   lf = log --graph --decorate --date=short --name-only --pretty=format:\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\"
   #ls = log --oneline --format=\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\" --graph
+  lt = !git log --graph --since=yesterday --decorate --date=short --pretty=format:\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\" | less -R
   dc = diff --cached
   co = checkout
   br = branch
