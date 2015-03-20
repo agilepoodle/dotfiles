@@ -40,14 +40,38 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+# completion definition
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+
 if [ -f /home/jusmonon/bin/git-prompt.sh ]; then
     source /home/jusmonon/bin/git-prompt.sh
-    export PS1='[\u@\h \[\e[0;32m\W$(__git_ps1 " ${bldylw}(%s)")\e[0m]\$ '
+    export PS1='[\t|\[\e[0;32m\W\e[0m|$(__git_ps1 "${bldylw}(%s)")\e[0m]\$ '
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
+# User specific aliases and functions
+
+alias g='git'
+alias st='git shortlog --summary  | sort -nr'
+
+alias mecl='mvn eclipse:clean eclipse:eclipse'
+alias mci='mvn clean install -T4 -U'
+alias mup='mvn -T4 versions:display-dependency-updates'
+alias mpup='mvn versions:display-plugin-updates'
+
+alias xmlgrep='grep -RH --include \*.xml '
+alias jgrep='grep -RH --include \*.java '
+alias propgrep='grep -RH --include \*.properties '
+alias f='find . -name '
+
+alias clean='rm -f *~'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/home/jusmonon/opt/HP_Fortify_SCA_and_Apps_4.10/bin"
