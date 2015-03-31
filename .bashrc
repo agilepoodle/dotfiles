@@ -50,7 +50,7 @@ export HISTCONTROL=ignoredups
 
 if [ -f /home/jusmonon/bin/git-prompt.sh ]; then
     source /home/jusmonon/bin/git-prompt.sh
-    export PS1='[\t|\[\e[0;32m\W\e[0m|$(__git_ps1 "${bldylw}(%s)")\e[0m]\$ '
+    export PS1='[\t|\[\e[0;32m\]\W$(__git_ps1 "|\[${bldylw}\](%s)")\[\e[0m]\]$ '
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
