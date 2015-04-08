@@ -48,9 +48,12 @@ fi
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 
+green=$(tput setaf 2)
+reset=$(tput sgr0)
+
 if [ -f /home/jusmonon/bin/git-prompt.sh ]; then
     source /home/jusmonon/bin/git-prompt.sh
-    export PS1='[\t|\[\e[0;32m\]\W$(__git_ps1 "|\[${bldylw}\](%s)")\[\e[0m]\]$ '
+    export PS1='\t|\[$green\]\W$(__git_ps1 "|\[${bldylw}\](%s)")\[$reset\]$ '
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
