@@ -53,7 +53,7 @@ reset=$(tput sgr0)
 
 if [ -f /home/jusmonon/bin/git-prompt.sh ]; then
     source /home/jusmonon/bin/git-prompt.sh
-    export PS1='\t|\[$green\]\W$(__git_ps1 "|\[${bldylw}\](%s)")\[$reset\]$ '
+    export PS1='\u|\[$green\]\W$(__git_ps1 "\[$reset\]|\[${bldylw}\](%s)")\[$reset\]$ '
 fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
