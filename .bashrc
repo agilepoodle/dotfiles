@@ -76,5 +76,6 @@ alias f='find . -name '
 
 alias clean='rm -f *~'
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/home/jusmonon/opt/HP_Fortify_SCA_and_Apps_4.10/bin"
+function fngrep() {
+    find . -name "$1" -exec grep -l "$2" \{\} \;
+}
