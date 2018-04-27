@@ -20,6 +20,9 @@
 ;; "Brevity is the soul of wit" <foo at acm.org>                               
 (defalias 'perl-mode 'cperl-mode)
 
+;; Show matching parens
+(show-paren-mode 1)
+
 ;; Rid of toolbar
 (tool-bar-mode -1)
 
