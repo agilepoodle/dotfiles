@@ -1,8 +1,10 @@
 [user]
   name = Jussi Mononen
-  email = jussi.mononen@nitorcreations.com
+  email = jussi.mononen@carbonlink.fi
+	signingkey = FC9CB3C1
 [alias]
   st = status
+  sw = switch
   lc = log ORIG_HEAD.. --stat --no-merges
   l = log --decorate
   ls = log --graph --decorate --date=short --pretty=format:\"%C(green)%h%C(reset) (%C(cyan)%an%C(reset))%C(red reverse)%d%C(reset) %C(yellow)%ad%C(reset) %s\"
@@ -32,6 +34,14 @@
 [color]
   ui = true
 [push]
-  default = upstream
+  default = simple
 [branch]
   autosetuprebase = always
+
+[gpg]
+	program = gpg2
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
